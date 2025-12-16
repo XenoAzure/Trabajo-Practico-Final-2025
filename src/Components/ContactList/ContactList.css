@@ -1,0 +1,145 @@
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+    height: 95px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
+}
+
+.contact-item:hover {
+    background-color: var(--hover-color, #f0f2f5);
+}
+
+.contact-item.active {
+    background-color: #dcf8c6;
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    position: relative;
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+.aside-dark .contact-item:hover {
+    background-color: var(--hover-color, #202c33);
+}
+
+.aside-dark .contact-item.active {
+    background-color: #005c4b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.avatar-container {
+    margin-right: 15px;
+}
+
+.contact-avatar {
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-bottom: 1px solid var(--border-color, #e9edef);
+    padding-right: 15px;
+    min-width: 0;
+
+}
+
+.aside-dark .contact-info {
+    border-bottom: 1px solid var(--border-color, #222d34);
+}
+
+.contact-item:last-child .contact-info {
+    border-bottom: none;
+}
+
+.contact-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+}
+
+.contact-name {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-primary);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.contact-time {
+    font-size: 12px;
+    color: var(--text-secondary, #667781);
+    white-space: nowrap;
+    margin-left: 6px;
+}
+
+.contact-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-message {
+    font-size: 14px;
+    color: var(--text-secondary, #667781);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    flex: 1;
+    margin-right: 6px;
+
+}
+
+.unread-badge {
+    background-color: #25d366;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+
+.contact-list-container {
+    overflow-y: auto;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #374045 transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contact-list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.contact-list-container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 3px;
+}

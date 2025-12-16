@@ -1,0 +1,139 @@
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5%;
+    overflow-y: auto;
+    background-color: var(--bg-color-main);
+    flex: 1;
+    gap: 2px;
+
+}
+
+
+
+.message-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    align-items: flex-end;
+}
+
+.message-row.received {
+    justify-content: flex-start;
+
+}
+
+.message-row.sent {
+    justify-content: flex-end;
+}
+
+.message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    margin-bottom: 5px;
+
+}
+
+.message-bubble {
+    max-width: 85%;
+    padding: 8px 10px;
+    border-radius: 7.5px;
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    color: #111b21;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+}
+
+
+.message-row.received .message-bubble {
+    /* Light theme color, for when you wanna be flashbanged in the night */
+    background-color: #ffffff;
+    border-top-left-radius: 0;
+}
+
+.message-row.sent .message-bubble {
+    background-color: #00c76a;
+    border-top-right-radius: 0;
+}
+
+.aside-dark .message-row.received .message-bubble {
+    background-color: #383838;
+    color: #e9edef;
+}
+
+.aside-dark .message-row.sent .message-bubble {
+    background-color: #005c4b;
+    color: #e9edef;
+}
+
+.message-content {
+    margin: 0;
+    margin-bottom: 2px;
+    word-wrap: break-word;
+
+}
+
+.message-meta {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    height: 15px;
+    margin-top: 2px;
+
+}
+
+/* Might get sued by facebook for using the "meta" word */
+.message-row.received .message-meta {
+    color: #667781;
+    opacity: 1;
+}
+
+.message-row.sent .message-meta {
+    color: #e9edef;
+    opacity: 0.8;
+}
+
+.aside-dark .message-meta {
+    color: #8696a0;
+}
+
+@media (min-width: 1080px) {
+    .message-bubble {
+        max-width: 75%;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 10px 14px;
+    }
+
+    .message-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .message-meta {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .message-bubble {
+        max-width: 700px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .message-bubble {
+        max-width: 65%;
+    }
+}

@@ -1,0 +1,25 @@
+.right-screen {
+    background-color: var(--bg-color-right-chat);
+    flex: 1;
+    min-width: 0;
+    /* Important for text truncation to work inside flex items, dont forget it, please, i beg you */
+}
+
+@media (max-width: 768px) {
+    .right-screen {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: var(--bg-color-container-chat, #efeae2);
+
+    }
+
+    .right-screen.show-on-mobile {
+        display: block;
+
+    }
+}
