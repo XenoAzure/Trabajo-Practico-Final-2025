@@ -22,6 +22,7 @@ export default function MessagesScreen() {
                 {
                     loadingContact
                         ? <div className='loading-container'>
+                            <i className="bi bi-whatsapp loading-logo-icon"></i>
                             <div className='loading-bar-container'>
                                 <div className='loading-bar-fill'></div>
                             </div>

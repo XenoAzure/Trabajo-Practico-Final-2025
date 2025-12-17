@@ -20,7 +20,6 @@
 }
 
 
-
 .aside-dark .chat-header {
     background-color: #202c33;
     border-bottom: 1px solid #111b21;
@@ -142,6 +141,25 @@
     color: #aebac1;
 }
 
+.loading-logo-icon {
+    font-size: 80px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    animation: logo-entrance 0.5s ease-out;
+}
+
+@keyframes logo-entrance {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 @keyframes fillProgress {
     0% {
         width: 0%;
@@ -181,7 +199,7 @@
     .header-icon {
         font-size: 28px;
     }
-    
+
     .header-actions {
         gap: 30px;
     }
