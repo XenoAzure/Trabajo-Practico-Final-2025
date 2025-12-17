@@ -137,3 +137,9 @@
         max-width: 65%;
     }
 }
+
+@media (max-width: 768px) {
+    .messages-container {
+        padding-bottom: 80px;
+    }
+}

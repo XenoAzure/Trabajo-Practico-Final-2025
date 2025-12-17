@@ -106,3 +106,14 @@
         margin: 0 12px;
     }
 }
+
+@media (max-width: 768px) {
+    .message-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        z-index: 100;
+        box-sizing: border-box;
+    }
+}
