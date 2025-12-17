@@ -3,7 +3,7 @@ import './ContactList.css'
 import { Link, useParams } from 'react-router'
 import { ContactListContext } from '../../Context/ContactListContext'
 
-export default function ContactList() {
+export default function ContactList({ searchQuery }) {
     const {
         contactState,
         loadingContactsState
@@ -20,7 +20,11 @@ export default function ContactList() {
         )
     }
 
-    if (contactState.length === 0) {
+    const filteredContacts = contactState.filter(contact =>
+        contact.contact_name.toLowerCase().includes(searchQuery?.toLowerCase() || '')
+    )
+
+    if (filteredContacts.length === 0) {
         return (
             <div>No hay contactos</div>
         )
@@ -28,7 +32,7 @@ export default function ContactList() {
     return (
         <div className='contact-list-container'>
             {
-                contactState.map(
+                filteredContacts.map(
                     function (contact) {
                         return (
                             <Link className={`contact-item ${Number(contact_id) === contact.contact_id ? 'active' : ''}`} key={contact.contact_id} to={'/chat/' + contact.contact_id + '/messages'}>

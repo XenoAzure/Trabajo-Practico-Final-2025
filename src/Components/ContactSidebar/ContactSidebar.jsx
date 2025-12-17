@@ -8,7 +8,7 @@ import './ContactSidebar.css'
 import "./ContactSideBarLeftIcons.css"
 import "./ContactSideBarMiddle.css"
 import "./ContactSideBarRight.css"
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import ContactSearchForm from '../ContactSearchForm/ContactSearchForm'
 import ContactList from '../ContactList/ContactList'
 import { ThemeContext } from '../../Context/ThemeContext'
@@ -21,6 +21,7 @@ export default function ContactSidebar({ children }) {
 
     const { isDark, toggleTheme } = useContext(ThemeContext)
     const { contactState } = useContext(ContactListContext)
+    const [searchQuery, setSearchQuery] = useState('')
 
     const totalUnreadMessages = contactState.reduce((acc, contact) => acc + contact.contact_unseen_messages, 0)
     return (
@@ -50,7 +51,7 @@ export default function ContactSidebar({ children }) {
                     </div>
 
 
-                    <ContactSearchForm />
+                    <ContactSearchForm onSearch={setSearchQuery} />
 
                     {/* Button for the Dark and FLASHBANG  PWaaaaaoooo themes */}
                     <div className='theme-toggle-container' style={{ width: '100%', padding: '0 15px', display: 'flex', justifyContent: 'center' }}>
@@ -78,7 +79,7 @@ export default function ContactSidebar({ children }) {
                             <span className='buttons-inner'>Grupos</span>
                         </a>
                     </div>
-                    <ContactList />
+                    <ContactList searchQuery={searchQuery} />
                     <div className='bottom-line'>
                         <hr className='horizontal-line-bottom' />
                         <div className='bottom-info'>

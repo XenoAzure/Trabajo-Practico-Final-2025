@@ -55,12 +55,12 @@
 .message-row.received .message-bubble {
     /* Light theme color, for when you wanna be flashbanged in the night */
     background-color: #ffffff;
-    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .message-row.sent .message-bubble {
     background-color: #00c76a;
-    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .aside-dark .message-row.received .message-bubble {
