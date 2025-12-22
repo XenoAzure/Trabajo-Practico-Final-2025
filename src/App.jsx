@@ -8,8 +8,6 @@ import ContactListContextProvider from "./Context/ContactListContext"
 import ContactDetailContextProvider from "./Context/ContactDetailContext"
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen"
 import 'bootstrap-icons/font/bootstrap-icons.css'
-
-
 import { ThemeContext } from "./Context/ThemeContext"
 
 function App() {
@@ -67,7 +65,8 @@ function App() {
         <Route
           path="/login"
           element={
-            <h1>Soy el login</h1>
+            <h1>Soy el login</h1> /*The path Login became unused for now,
+            but its still there for future use, im tired...*/
           }
         />
       </Routes>

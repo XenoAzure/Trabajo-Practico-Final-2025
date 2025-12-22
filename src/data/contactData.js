@@ -4,7 +4,7 @@ const contact_data = [
         contact_id: 1,
         contact_name: 'Frieren',
         contact_avatar: 'https://i.blogs.es/585f08/frieren/1200_800.jpeg',
-        contact_unseen_messages: 5,
+        contact_unseen_messages: 0,
         last_message_content: 'Tenes libros?',
         last_message_state: 'RECEIVED',/*'NOT_SEND' | 'NOT_RECEIVED' | 'RECEIVED' | 'SEEN'*/
         last_message_created_at: new Date(),
@@ -23,6 +23,20 @@ const contact_data = [
                 message_state: 'SEEN',
                 message_created_at: new Date(),
                 send_by_me: false
+            },
+            {
+                message_id: 3,
+                message_content: 'O algun grimorio, lo que sea, necesito algo para pasar el tiempo',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            },
+            {
+                message_id: 4,
+                message_content: 'No, pero... sabes que se puede leer por internet, no? claro que yo lo tengo pirata, guiño guiño',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: true
             }
         ]
     },
@@ -30,14 +44,35 @@ const contact_data = [
         contact_id: 2,
         contact_name: 'Fern',
         contact_avatar: 'https://cdn.rafled.com/anime-icons/images/80i2sxkUjJNf4A1Ow7m3GYIDGpnKjQWi.jpg',
-        contact_unseen_messages: 0,
-        last_message_content: 'Que tal?',
+        contact_unseen_messages: 1,
+        last_message_content: 'Ah, menos mal, ... espera que?',
         last_message_state: 'SEEN',
         last_message_created_at: new Date(),
         messages: [
             {
                 message_id: 1,
-                message_content: 'Que tal?',
+                message_content: 'Frieren tiene cierta obsesion por los libros, sobretodo los libros raros',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            },
+            {
+                message_id: 2,
+                message_content: 'Asi que si se entera que tenes, por ejemplo, una edicion limitada de algun libro, te va a seguir por bastante tiempo hasta que se lo des',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            },
+            {
+                message_id: 3,
+                message_content: 'No pasa nada, le pase una especie de "cuevana" para que vea los libros que ella quiera',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: true
+            },
+            {
+                message_id: 4,
+                message_content: 'Ah, menos mal, ... espera que?',
                 message_state: 'SEEN',
                 message_created_at: new Date(),
                 send_by_me: false
@@ -48,14 +83,21 @@ const contact_data = [
         contact_id: 3,
         contact_name: 'Stark',
         contact_avatar: 'https://practicaltyping.com/wp-content/uploads/2024/05/stark.jpg',
-        contact_unseen_messages: 3,
-        last_message_content: 'Soy Stark, que onda?',
+        contact_unseen_messages: 2,
+        last_message_content: 'Dame algun consejo para que Fern me de bola ....😭',
         last_message_state: 'SEEN',
         last_message_created_at: new Date(),
         messages: [
             {
                 message_id: 1,
                 message_content: 'Soy Stark, que onda?',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            },
+            {
+                message_id: 2,
+                message_content: 'Dame algun consejo para que Fern me de bola ....😭',
                 message_state: 'SEEN',
                 message_created_at: new Date(),
                 send_by_me: false
@@ -131,6 +173,13 @@ const contact_data = [
                 message_state: 'SEEN',
                 message_created_at: new Date(),
                 send_by_me: false
+            },
+            {
+                message_id: 2,
+                message_content: 'guiso carrero',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
             }
         ]
     },
@@ -188,6 +237,70 @@ const contact_data = [
             }
         ]
     },
+    {
+        contact_id: 11,
+        contact_name: 'John Wick',
+        contact_avatar: 'https://www.concierto.cl/wp-content/uploads/2025/04/john-wick-5-768x432.webp',
+        contact_unseen_messages: 0,
+        last_message_content: "Necesito un arma, algo que sea robusto, preciso",
+        last_message_state: 'SEEN',
+        last_message_created_at: new Date(),
+        messages: [
+            {
+                message_id: 1,
+                message_content: "Necesito un arma, algo que sea robusto, preciso",
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            },
+            {
+                message_id: 2,
+                message_content: "Robusto y preciso?...",
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: true
+            },
+            {
+                message_id: 3,
+                message_content: "Que tal un AR-15 11.5 pulgadas",
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: true
+            },
+            {
+                message_id: 4,
+                message_content: "Y algo para el fin de la noche, algo... grande y tenaz",
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            },
+            {
+                message_id: 5,
+                message_content: "Puedo sugerirle la Benelli M4? Un clasico italiano",
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: true
+            }
+        ]
+    },
+    {
+        contact_id: 12,
+        contact_name: 'Gordon Freeman',
+        contact_avatar: 'https://alchetron.com/cdn/gordon-freeman-16229674-39e0-4150-90fe-d77d6d6b2b3-resize-750.jpeg',
+        contact_unseen_messages: 1,
+        last_message_content: '. . .',
+        last_message_state: 'SEEN',
+        last_message_created_at: new Date(),
+        messages: [
+            {
+                message_id: 1,
+                message_content: '. . .',
+                message_state: 'SEEN',
+                message_created_at: new Date(),
+                send_by_me: false
+            }
+        ]
+    }
 ]
 
 export default contact_data

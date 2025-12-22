@@ -16,9 +16,6 @@ import { ContactListContext } from '../../Context/ContactListContext'
 
 export default function ContactSidebar({ children }) {
 
-    /* I wanna thank my 2 friends for helping me with the JS part before I had an Aneurysm, Betharni and Marotte
-       I owe them a beer */
-
     const { isDark, toggleTheme } = useContext(ThemeContext)
     const { contactState } = useContext(ContactListContext)
     const [searchQuery, setSearchQuery] = useState('')
